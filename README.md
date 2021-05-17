@@ -32,13 +32,13 @@ VEX是万加链实现的跨链操作协议，包含跨链资产交换协议和�
 ## 获取代码
 
 下载所有的代码，克隆vkt项目库和子模块.  
-git clone https://github.com/vankiaio/vkt.git --recursive  
+git clone https://github.com/IOTD-BY-VKT/iotd.git --recursive  
 
 如果某个项目库已经被克隆没有 --recursive 标记 ，则可以在repo内运行以下命令来检索子模块：  
 git submodule update --init --recursive  
 
 ### 自动化编译脚本
-自动化编译脚本首先会检查和安装需要的依赖库,然后进行编译 vkt.   
+自动化编译脚本首先会检查和安装需要的依赖库,然后进行编译 iotd.   
 脚本支持如下所示的操作系统,我们会在将来的版本中支持其他的Linux/Unix版本.
 
 ### OS
@@ -54,8 +54,8 @@ MacOS Darwin 10.12 及 更高版本 (推荐MacOS 10.13.x).
 至少需要 20GB 磁盘空间  
 
 ### 运行编译脚本
-在 vkt 文件夹中运行脚本,命令如下：
+在 iotd 文件夹中运行脚本,命令如下：
 
-cd vkt  
+cd iotd  
 ./scripts/eosio_build.sh  
 ./scripts/eosio_install.sh  

@@ -22,8 +22,8 @@ include( InstallDirectoryPermissions )
 include( MASSigning )
 
 
-set( CORE_SYMBOL_NAME "VKT" )
-set( BLOCKCHAIN_NAME "VKTIO" )
+set( CORE_SYMBOL_NAME "IOTD" )
+set( BLOCKCHAIN_NAME "IOTDIO" )
 set( CMAKE_CXX_STANDARD 17 )
 set( CMAKE_CXX_EXTENSIONS ON )
 set( CXX_STANDARD_REQUIRED ON)

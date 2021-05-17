@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in vkt/LICENSE.txt
+ *  @copyright defined in iotd/LICENSE.txt
  */
 #include <eosio/vkt_txn_test_gen_plugin/vkt_txn_test_gen_plugin.hpp>
 #include <eosio/chain_plugin/chain_plugin.hpp>
@@ -442,16 +442,16 @@ vkt_txn_test_gen_plugin::~vkt_txn_test_gen_plugin() {}
 
 void vkt_txn_test_gen_plugin::set_program_options(options_description&, options_description& cfg) {
    cfg.add_options()
-      ("vkt-txn-reference-block-lag", bpo::value<int32_t>()->default_value(0), "Lag in number of blocks from the head block when selecting the reference block for transactions (-1 means Last Irreversible Block)")
-      ("vkt-txn-test-gen-threads", bpo::value<uint16_t>()->default_value(2), "Number of worker threads in txn_test_gen thread pool")
-      ("vkt-txn-test-gen-account-prefix", bpo::value<string>()->default_value("txn.test."), "Prefix to use for accounts generated and used by this plugin")
+      ("iotd-txn-reference-block-lag", bpo::value<int32_t>()->default_value(0), "Lag in number of blocks from the head block when selecting the reference block for transactions (-1 means Last Irreversible Block)")
+      ("iotd-txn-test-gen-threads", bpo::value<uint16_t>()->default_value(2), "Number of worker threads in txn_test_gen thread pool")
+      ("iotd-txn-test-gen-account-prefix", bpo::value<string>()->default_value("txn.test."), "Prefix to use for accounts generated and used by this plugin")
    ;
 }
 
 void vkt_txn_test_gen_plugin::plugin_initialize(const variables_map& options) {
    try {
       my.reset( new vkt_txn_test_gen_plugin_impl );
-      my->txn_reference_block_lag = options.at( "vkt-txn-reference-block-lag" ).as<int32_t>();
+      my->txn_reference_block_lag = options.at( "iotd-txn-reference-block-lag" ).as<int32_t>();
       my->thread_pool_size = options.at( "txn-test-gen-threads" ).as<uint16_t>();
       const std::string thread_pool_account_prefix = options.at( "txn-test-gen-account-prefix" ).as<std::string>();
       my->newaccountA = thread_pool_account_prefix + "a";
