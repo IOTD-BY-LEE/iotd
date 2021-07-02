@@ -32,7 +32,7 @@ VEX是数易链实现的跨链操作协议，包含跨链资产交换协议和�
 ## 获取代码
 
 下载所有的代码，克隆iotd项目库和子模块.  
-git clone https://github.com/IOTD-BY-VKT/iotd.git --recursive  
+git clone https://github.com/IOTD-BY-LEE/iotd.git --recursive  
 
 如果某个项目库已经被克隆没有 --recursive 标记 ，则可以在repo内运行以下命令来检索子模块：  
 git submodule update --init --recursive  
